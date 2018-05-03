@@ -12,6 +12,7 @@
 <script>
 
 export default {
+  layout: 'admin',
   components: {
     
   }
@@ -28,10 +29,10 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: "adelle-sans",Arial Narrow,Geneva,Lucida Grande,Helvetica,sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 60px;
   letter-spacing: 1px;
 }
 

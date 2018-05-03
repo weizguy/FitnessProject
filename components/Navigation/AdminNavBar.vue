@@ -1,22 +1,23 @@
 <template>
 <div class="header-container">
   <header class="the-header">
+    <div class="spacer"></div>
     <div class="logo">
       <nuxt-link to="/">
         <img class="img" src="~/assets/images/fitIconlg.png"/>
       </nuxt-link>
     </div>
-    <div class="btn-group">
-      <nuxt-link to="/user"><button class="btn">Welcome</button></nuxt-link>
-      <nuxt-link to="/"><button class="btn">About</button></nuxt-link>
-      <nuxt-link to="/"><button class="btn">Admin</button></nuxt-link>
+    <div class="navigation-items">
+      <ul class="nav-list">
+        <li class="nav-item"><nuxt-link to="/user">Features</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/user">Partners</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/user">Pricing</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/user"><input type="button" class="button" value="Try it free"></nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/user">Login</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/user">Support</nuxt-link></li>
+      </ul>
     </div>
     <div class="spacer"></div>
-    <div class="logo">
-      <nuxt-link to="/"><font-awesome-icon :icon="help" fixed-width /></nuxt-link>
-      <nuxt-link to="/"><font-awesome-icon :icon="settings" fixed-width /></nuxt-link>
-      <nuxt-link to="/"><font-awesome-icon :icon="user" fixed-width /></nuxt-link>
-    </div>
   </header>
 </div>
 </template>
@@ -25,9 +26,6 @@
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import { faFacebookF } from '@fortawesome/fontawesome-free-brands'
 import { faTwitter } from '@fortawesome/fontawesome-free-brands'
-import { faQuestionCircle } from '@fortawesome/fontawesome-free-solid'
-import { faUser } from '@fortawesome/fontawesome-free-solid'
-import { faCog } from '@fortawesome/fontawesome-free-solid'
 
 export default {
   name: 'TopNavBar',
@@ -37,15 +35,6 @@ export default {
       },
       tw () {
           return faTwitter
-      },
-      help () {
-          return faQuestionCircle
-      },
-      user () {
-          return faUser
-      },
-      settings () {
-          return faCog
       }
   },
   components: {
@@ -56,35 +45,30 @@ export default {
 
 
 <style scoped>
-.btn-group .btn {
-    background-color: #1e282d; /* Green */
-    border: 1px solid #1e282d;
-    color: #bbc5ca;
-    padding: 18px 32px;
+.button {
+    background-color: #1B58A5; /* Green */
+    border: 1px solid #1B58A5;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    cursor: pointer;
+    margin-right: 100px;
 }
-.btn-group .btn:not(:last-child) {
-    border-right: none; /* Prevent double borders */
+
+.button:hover {
+    background-color: #336AAF;
 }
-.btn-group .btn:hover {
-    background-color: #1B58A5;
-    color: white;
-}
-.btn-group .btn:active {
-    background-color: #c;
-    color: white;
-}
+
 .img {
   width: 225px;
   height: 40px;
   padding-right: 20px;
 }
 .header-container {
-  height: 55px;
+  height: 70px;
   font-size: 18px;
   font-family: "adelle-sans",Arial Narrow,Geneva,Lucida Grande,Helvetica,sans-serif;
 }
@@ -92,7 +76,7 @@ export default {
 .the-header {
   width: 100%;
   position: fixed;
-  height: 55px;
+  height: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -110,11 +94,10 @@ export default {
 .logo a {
   text-decoration: none;
   color: #bbc5ca;
-  padding-right: 10px;
 }
 
 .logo a:hover {
-  color: #1B58A5;
+  color: white;
 }
 
 .spacer {
@@ -142,17 +125,12 @@ export default {
   margin: 0 10px;
 }
 
-a {
+.nav-item a {
   text-decoration: none;
   color: #bbc5ca;
 }
 
-a:hover {
+.nav-item a:hover {
   color: white;
-}
-
-a:active {
-  color: white;
-  font-weight: bold;
 }
 </style>

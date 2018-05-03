@@ -19,7 +19,7 @@
 <script>
 
 export default {
-  name: "MainNavBar",
+  name: "SideNavBar",
   components: {
 
   }
@@ -33,13 +33,13 @@ export default {
 }
 
 .the-header {
-  width: 100%;
+  width: 250px;
   position: fixed;
-  height: 100px;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #D9B310;
+  background-color: #333;
   z-index: 100;
   box-sizing: border-box;
   padding: 0 20px;

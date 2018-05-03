@@ -1,16 +1,16 @@
 <template>
   <div>
-    <TopNavBar />
+    <AdminNavBar />
     <nuxt/>
   </div>
 </template>
 
 <script>
-import TopNavBar from '@/components/Navigation/TopNavBar'
+import AdminNavBar from '@/components/Navigation/AdminNavBar'
 
 export default {
   components: {
-    TopNavBar
+    AdminNavBar
   }
 }
 </script>
